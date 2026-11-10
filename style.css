@@ -1,0 +1,41 @@
+/* Estilos do site PeçasMobile */
+:root {
+  --azul-escuro: #10243a;
+  --azul: #1769aa;
+  --fundo: #f3f7fb;
+  --laranja: #ffb547;
+  --texto: #243447;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: var(--texto); line-height: 1.6; background: #fff; }
+header { background: var(--azul-escuro); color: white; padding: 16px 6%; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.logotipo { font-size: 1.35rem; font-weight: 800; }
+.logotipo span { color: var(--laranja); }
+nav { display: flex; flex-wrap: wrap; gap: 16px; }
+nav a { color: white; text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { color: var(--laranja); text-decoration: underline; }
+.destaque { padding: 56px 6%; background: linear-gradient(120deg, #eaf4ff, #fff7e8); display: grid; grid-template-columns: 1.15fr 1fr; gap: 28px; align-items: center; }
+.destaque h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.12; margin: 0 0 16px; color: var(--azul-escuro); }
+.destaque p { max-width: 620px; font-size: 1.05rem; }
+.imagem-destaque { width: 100%; height: auto; display: block; border-radius: 18px; box-shadow: 0 12px 32px #10243a18; }
+.botao { display: inline-block; background: var(--azul); color: white; padding: 12px 20px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 10px; }
+.botao:hover, .botao:focus { background: var(--azul-escuro); }
+section { padding: 44px 6%; }
+h2 { color: var(--azul-escuro); margin-top: 0; }
+.produtos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.cartao { border: 1px solid #e0e8f0; border-radius: 14px; padding: 20px; background: white; box-shadow: 0 5px 18px #10243a0b; }
+.icone { font-size: 2.5rem; }
+.cartao h3 { margin: 8px 0; }
+.preco { font-weight: 800; color: var(--azul); }
+.aviso { background: var(--fundo); border-left: 4px solid var(--laranja); padding: 14px 18px; border-radius: 6px; }
+.contactos { background: var(--azul-escuro); color: white; }
+.contactos h2 { color: white; }
+footer { text-align: center; padding: 18px; background: #091725; color: #d8e4ef; font-size: .9rem; }
+@media (max-width: 760px) {
+  header { align-items: flex-start; }
+  nav { gap: 10px 14px; }
+  .destaque { grid-template-columns: 1fr; padding-top: 34px; }
+  .produtos { grid-template-columns: 1fr; }
+  section { padding: 34px 5%; }
+}
